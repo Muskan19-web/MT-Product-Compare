@@ -1,0 +1,101 @@
+Deployed App
+Frontend: Frontend Deployment Link
+Backend: Backend Deployment Link
+Database: Database Deployment Link
+Directory Structure
+my-app/
+├─ backend/
+│  ├─ controllers/
+│  ├─ models/
+│  ├─ routes/
+│  ├─ server.js
+├─ frontend/
+│  ├─ public/
+│  ├─ src/
+│  ├─ index.js
+│  ├─ App.js
+├─ README.md
+├─ package.json
+Video Walkthrough of the Project
+A short video walkthrough showcasing the features of the chat application can be found here.
+
+Video Walkthrough of the Codebase
+A brief video explaining the structure and logic behind the codebase can be found here.
+
+Features
+User Registration: Allows new users to register and create an account.
+Real-Time Messaging: Users can send and receive messages instantly.
+Group Chat: Users can create and manage group chats.
+Chat History: View the chat history between two users or within a group.
+Design Decisions & Assumptions
+Modular Architecture: The project is split into frontend and backend for maintainability.
+WebSockets for Real-Time Communication: WebSockets were chosen to handle real-time messaging due to their efficiency.
+Simple User Interface: Focus on core functionalities rather than advanced UI/UX features.
+Installation & Getting Started
+To run the project locally, follow these steps:
+
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/your-username/chat-application-simulation.git
+Navigate to the project directory:
+bash
+Copy code
+cd chat-application-simulation
+Install dependencies for both backend and frontend:
+bash
+Copy code
+npm install
+cd frontend && npm install
+cd ../backend && npm install
+Start the application:
+bash
+Copy code
+npm start
+Usage
+To use the chat application:
+
+Register a New User:
+Go to the registration page and create a new account.
+Send a Message:
+Once logged in, select a contact and start a conversation.
+Create a Group Chat:
+Navigate to the group chat section, create a new group, and add members.
+View Chat History:
+Access chat history by selecting a user or group from your contacts.
+bash
+Copy code
+# Example usage of the ChatApp class in chat.js
+const chatApp = new ChatApp();
+chatApp.registerUser('Alice');
+chatApp.registerUser('Bob');
+chatApp.sendMessage('Alice', 'Bob', 'Hello Bob!');
+console.log(chatApp.displayChatHistory('Alice', 'Bob'));
+Credentials
+Admin:
+Username: admin
+Password: admin123
+Test User:
+Username: testuser
+Password: password
+APIs Used
+User Authentication API: For handling user registration and login.
+Messaging API: For sending and receiving messages.
+Group Chat API: For managing group chat functionalities.
+API Endpoints
+User Endpoints
+POST /api/register: Register a new user.
+POST /api/login: Authenticate a user.
+Message Endpoints
+POST /api/messages: Send a message.
+GET /api/messages: Retrieve all messages between users.
+Group Chat Endpoints
+POST /api/group: Create a new group chat.
+POST /api/group/add: Add a user to a group.
+POST /api/group/remove: Remove a user from a group.
+Technology Stack
+Node.js: Backend runtime environment for handling server-side logic.
+Express.js: Web framework for building the backend API.
+MongoDB: NoSQL database used for storing user data and messages.
+WebSockets: For real-time communication between clients and the server.
+React.js: Frontend library for building user interfaces.
